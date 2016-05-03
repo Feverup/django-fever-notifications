@@ -47,7 +47,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author='Diego Navarro Mellen',
     author_email='dnmellen@gmail.com',
-    url='https://github.com/dnmellen/django-fever-notifications',
+    url='https://github.com/Feverup/django-fever-notifications',
     packages=[
         'fevernotifications',
     ],
