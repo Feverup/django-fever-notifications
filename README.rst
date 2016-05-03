@@ -5,8 +5,8 @@ django-fever-notifications
 .. image:: https://badge.fury.io/py/django-fever-notifications.png
     :target: https://badge.fury.io/py/django-fever-notifications
 
-.. image:: https://travis-ci.org/dnmellen/django-fever-notifications.png?branch=master
-    :target: https://travis-ci.org/dnmellen/django-fever-notifications
+.. image:: https://travis-ci.org/Feverup/django-fever-notifications.png?branch=master
+    :target: https://travis-ci.org/Feverup/django-fever-notifications
 
 Generic models for implement message based features
 
@@ -23,6 +23,9 @@ Install django-fever-notifications::
     pip install django-fever-notifications
 
 Then use it in a project::
+
+
+.. code-block :: python
 
 	from fevernotifications.models import Notification
     from fevernotifications.shortcuts import create_notification
