@@ -22,19 +22,19 @@ Install django-fever-notifications::
 
     pip install django-fever-notifications
 
-Then use it in a project::
+Then use it in a project:
 
 
 .. code-block :: python
 
-	from fevernotifications.models import Notification
-	from fevernotifications.shortcuts import create_notification
+    from fevernotifications.models import Notification
+    from fevernotifications.shortcuts import create_notification
 
-	# Create a notification
-	create_notification(user, title="Hello", message="Hello world!")
+    # Create a notification
+    create_notification(user, title="Hello", message="Hello world!")
 
-	# Query all notifications per user
-	Notification.objects.by_target(user)
+    # Query all notifications per user
+    Notification.objects.by_target(user)
 
 
 Features
