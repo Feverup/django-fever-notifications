@@ -85,10 +85,13 @@ class Notification(models.Model):
     target = GenericForeignKey('target_content_type', 'target_id')
     status = models.CharField(choices=STATUS_CHOICES, default=UNREAD, max_length=50, db_index=True)
     url = models.URLField(blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True, db_index=True)
     expiration = models.DateTimeField(null=True, blank=True)
 
     objects = NotificationManager()
+
+    class Meta:
+        ordering = ['-created_at']
 
     def delete(self):
         # Fetch related models
