@@ -22,12 +22,12 @@ Install django-fever-notifications::
 
     pip install django-fever-notifications
 
-Then use it in a project::
+Then use it in a project:
 
 
 .. code-block :: python
 
-	from fevernotifications.models import Notification
+    from fevernotifications.models import Notification
     from fevernotifications.shortcuts import create_notification
 
     # Create a notification
