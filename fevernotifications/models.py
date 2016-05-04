@@ -86,7 +86,7 @@ class Notification(models.Model):
     status = models.CharField(choices=STATUS_CHOICES, default=UNREAD, max_length=50, db_index=True)
     url = models.URLField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
-    expiration = models.DateTimeField(null=True, blank=True)
+    expiration = models.DateTimeField(null=True, blank=True, db_index=True)
 
     objects = NotificationManager()
 
