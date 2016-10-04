@@ -42,6 +42,18 @@ class NotificationManager(models.Manager):
                 target_id=target.id
             )
 
+    def unread(self):
+        if self.model:
+            return super(NotificationManager, self).get_queryset().filter(
+                status=self.model.UNREAD
+            )
+
+    def read(self):
+        if self.model:
+            return super(NotificationManager, self).get_queryset().filter(
+                status=self.model.READ
+            )
+
     def all_with_deleted(self):
         if self.model:
             return QuerySet(self.model, using=self._db).all()
